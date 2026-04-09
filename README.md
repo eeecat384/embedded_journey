@@ -1,2 +1,14 @@
-# embedded_journey
-Embedded learning journey: from baremetal registers to Linux device drivers | 嵌入式学习全记录
+# Embedded Journey
+
+## 📚 学习流程
+CLanguage -> baremetal
+
+## 🎯 当前进度
+- [√] C语言基础
+- [x] ARM Cortex-M 启动流程
+
+## 🗂️ 快速导航
+| 阶段 | 目录 | 关键成果 |
+|------|------|----------|
+| C语言 | `CLanguage/` | 完成 |
+

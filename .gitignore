@@ -1,55 +1,172 @@
-# Prerequisites
-*.d
-
-# Object files
+# ==========================================
+# 1. 基础 C/C++ 编译产物（裸机开发）
+# ==========================================
+# 编译产物
 *.o
-*.ko
 *.obj
 *.elf
-
-# Linker output
-*.ilk
+*.bin
+*.hex
+*.srec
 *.map
-*.exp
+*.lst
+*.lss
+*.sym
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
+# 静态/动态库
 *.lib
 *.a
 *.la
 *.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
 *.so
-*.so.*
+*.dll
 *.dylib
 
-# Executables
+# 可执行文件（裸机通常是 .elf，但命名可能不同）
 *.exe
 *.out
 *.app
-*.i*86
-*.x86_64
-*.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# 依赖生成文件
+*.d
+*.dep
+*.mk
+Makefile.in
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
 
-# Kernel Module Compile Results
-*.mod*
+# ==========================================
+# 2. 嵌入式 IDE & 工具链特定
+# ==========================================
+# Keil / MDK
+*.uvoptx
+*.uvprojx
+*.uvguix.*
+*.uvmpw
+*.build_log.htm
+*.htm
+*.iex
+*.fed
+Objects/
+Listings/
+DebugConfig/
+*.axf
+
+# STM32CubeIDE / Eclipse
+.project
+.cproject
+.settings/
+.mxproject
+*.launch
+Debug/
+Release/
+*.cfg
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piobuild/
+.clang_complete
+.gcc-flags.json
+
+# J-Link / OpenOCD
+JLinkSettings.ini
+JLinkLog.txt
+*.jlink
+
+# IAR Embedded Workbench
+*.ewp
+*.ewt
+*.ewd
+*.dep
+*.sim
+settings/
+Debug/
+Release/
+
+# ==========================================
+# 3. Linux 内核 & 驱动开发
+# ==========================================
+*.ko
+*.mod
+*.mod.c
+*.order
 *.cmd
-.tmp_versions/
-modules.order
 Module.symvers
-Mkfile.old
-dkms.conf
+modules.builtin
+*.dtbo
+*.dtb
 
-# debug information files
-*.dwo
+# 内核编译目录（如果你在内核源码里开发）
+arch/*/boot/
+vmlinux
+System.map
+vmlinuz
+bzImage
+zImage
+uImage
+.config.old
+
+# 根文件系统构建产物（Buildroot/Yocto）
+build/
+downloads/
+sstate-cache/
+tmp/
+deploy/
+cache/
+
+# ==========================================
+# 4. 通用开发环境
+# ==========================================
+# IDE
+.vscode/*
+!.vscode/settings.json      # 可以保留推荐的设置
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python（如果有辅助脚本）
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+venv/
+pip-log.txt
+
+# GDB & 调试
+.gdb_history
+.gdbinit.local
+core
+core.*
+*.stackdump
+
+# ==========================================
+# 5. 文档与生成文件
+# ==========================================
+# Doxygen 生成的文档
+html/
+latex/
+*.dox
+
+# 数据手册（大文件放 Releases 或 LFS，别放 git）
+datasheets/*.pdf
+*.pdf binary
+
+# 日志文件
+*.log
+*.csv      # 采集的数据文件通常很大
+
+# ==========================================
+# 6. 敏感信息（绝对不能提交）
+# ==========================================
+*.pem
+*.key
+secrets.h
+credentials.*
+wifi_config.h     # 包含 WiFi 密码的头文件

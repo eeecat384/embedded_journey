@@ -10,5 +10,5 @@ CLanguage -> baremetal
 ## 🗂️ 快速导航
 | 阶段 | 目录 | 关键成果 |
 |------|------|----------|
-| C语言 | `CLanguage/` | 完成 |
+| C语言 | `notes/Clanguage` | 完成 |
 

@@ -4,7 +4,7 @@
 
 参考文档/表格：<br>
 [STM32资料](/docs/STM32资料.md)<br>
-[STM32F103C8T6引脚定义](/cheatsheets/STM32F103C8T6引脚定义.md)<br>
+[STM32F103C8T6引脚定义](/cheatsheets/STM32/STM32F103C8T6引脚定义.md)<br>
 [AFIO 重映射表](/cheatsheets/STM32/AFIO重映射表.md)<br>
 [外设的GPIO配置](/cheatsheets/STM32/外设的GPIO配置.md)<br>
 
@@ -65,7 +65,7 @@ GPIO_Init(GPIOA, &GPIOInitStructure);//传入结构体，初始化对应IO口
 
 >“为了优化64脚或100脚封装的外设数目，可以把一些复用功能重新映射到其他引脚上。设置复用重映射和调试I/O配置寄存器(AFIO_MAPR)实现引脚的重新映射。这时，复用功能不再映射到它们的原始分配上。”
 
-下面以TIM2的输出比较功能为例，查表（[外设的GPIO配置](/cheatsheets/STM32/外设的GPIO配置.md)和[STM32F103C8T6引脚定义](/cheatsheets/STM32F103C8T6引脚定义.md)）
+下面以TIM2的输出比较功能为例，查表（[外设的GPIO配置](/cheatsheets/STM32/外设的GPIO配置.md)和[STM32F103C8T6引脚定义](/cheatsheets/STM32/STM32F103C8T6引脚定义.md)）
 
 | TIM2/3/4/5 引脚 | 配置             | GPIO 配置    |
 | :-------------- | :--------------- | :----------- |

@@ -3,7 +3,7 @@
 本笔记为STM32F103C8T6单片机学习笔记，默认以此型号为例子
 
 参考文档/表格：<br>
-[STM32资料](/docs/STM32资料.md)<br>
+[STM32资料/STM32F10xxx参考手册](/docs/STM32资料.md)P105-P129<br>
 [STM32F103C8T6引脚定义](/cheatsheets/STM32/STM32F103C8T6引脚定义.md)<br>
 [AFIO 重映射表](/cheatsheets/STM32/AFIO重映射表.md)<br>
 [外设的GPIO配置](/cheatsheets/STM32/外设的GPIO配置.md)<br>
